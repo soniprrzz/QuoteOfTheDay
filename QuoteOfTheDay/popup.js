@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const newQuoteButton = document.getElementById('new-quote');
   
     function fetchQuote() {
-      fetch('https://api.quotable.io/random') // You can use another quotes API if you prefer
+      fetch('https://api.quotable.io/random')
         .then(response => response.json())
         .then(data => {
           quoteElement.textContent = `"${data.content}" — ${data.author}`;
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
     newQuoteButton.addEventListener('click', fetchQuote);
   
-    // Fetch a quote when the popup is loaded
+
     fetchQuote();
   });
   
